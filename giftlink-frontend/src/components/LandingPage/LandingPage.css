@@ -1,0 +1,13 @@
+.landing-page {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  min-height: 100vh;
+}
+
+.landing-page h1 {
+  color: white;
+}
+
+.landing-page .lead {
+  color: rgba(255, 255, 255, 0.9);
+}
