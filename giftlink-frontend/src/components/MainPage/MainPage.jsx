@@ -90,6 +90,70 @@ function MainPage({ user }) {
         age_years: 1,
         description: "Portable bluetooth speaker with excellent sound quality. Includes charger.",
         image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400"
+      },
+      {
+        name: "Children's Book Collection",
+        category: "Books",
+        condition: "Like New",
+        age_years: 2,
+        description: "Set of 10 children's books, gently used and perfect for ages 5-8.",
+        image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400"
+      },
+      {
+        name: "Laptop Bag",
+        category: "Accessories",
+        condition: "New",
+        age_years: 0,
+        description: "Brand new laptop bag, fits up to 15 inch laptops. Multiple compartments.",
+        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400"
+      },
+      {
+        name: "Plant Pots Set",
+        category: "Garden",
+        condition: "Good",
+        age_years: 2,
+        description: "Set of 6 ceramic plant pots in various sizes. Perfect for indoor plants.",
+        image: "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=400"
+      },
+      {
+        name: "Running Shoes",
+        category: "Sports",
+        condition: "Like New",
+        age_years: 1,
+        description: "Men's running shoes, size 10. Excellent condition, worn only a few times.",
+        image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400"
+      },
+      {
+        name: "Art Supplies Kit",
+        category: "Art",
+        condition: "New",
+        age_years: 0,
+        description: "Complete art supplies kit with paints, brushes, and canvas. Never opened.",
+        image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=400"
+      },
+      {
+        name: "Dining Chairs",
+        category: "Furniture",
+        condition: "Good",
+        age_years: 4,
+        description: "Set of 4 dining chairs. Comfortable and sturdy with minor wear.",
+        image: "https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=400"
+      },
+      {
+        name: "Cookbook Collection",
+        category: "Books",
+        condition: "Good",
+        age_years: 3,
+        description: "Collection of 8 cookbooks covering various cuisines. Some recipe notes included.",
+        image: "https://images.unsplash.com/photo-1543168256-418811576931?w=400"
+      },
+      {
+        name: "Desk Lamp",
+        category: "Lighting",
+        condition: "New",
+        age_years: 0,
+        description: "Modern LED desk lamp with adjustable brightness. Energy efficient.",
+        image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=400"
       }
     ];
 
@@ -120,15 +184,22 @@ function MainPage({ user }) {
     <Container className="py-5">
       <div className="d-flex justify-content-between align-items-center mb-4">
         <h1>Browse All Gifts</h1>
-        {gifts.length === 0 && !loading && (
+        <div>
           <Button 
             variant="success" 
             onClick={addSampleGifts}
             disabled={adding}
+            className="me-2"
           >
             {adding ? 'Adding...' : 'Add Sample Gifts'}
           </Button>
-        )}
+          <Button 
+            variant="info" 
+            onClick={fetchGifts}
+          >
+            Refresh Gifts
+          </Button>
+        </div>
       </div>
       {error && <Alert variant="danger">{error}</Alert>}
       
