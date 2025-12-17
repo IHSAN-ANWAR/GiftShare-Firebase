@@ -1,13 +1,5 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "framework": "vite",
-  "env": {
-    "VITE_FIREBASE_API_KEY": "AIzaSyB3ecvZn5jra4x-ryCMGaATRgPEzbiB-ug",
-    "VITE_FIREBASE_AUTH_DOMAIN": "giftshare-89ace.firebaseapp.com",
-    "VITE_FIREBASE_PROJECT_ID": "giftshare-89ace",
-    "VITE_FIREBASE_STORAGE_BUCKET": "giftshare-89ace.firebasestorage.app",
-    "VITE_FIREBASE_MESSAGING_SENDER_ID": "324017299838",
-    "VITE_FIREBASE_APP_ID": "1:324017299838:web:da89d33aa95eb0890a932f"
-  }
+  "framework": "vite"
 }
